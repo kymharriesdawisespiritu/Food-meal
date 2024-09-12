@@ -27,16 +27,15 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header searchQuery={searchQuery} handleSubmit={handleSubmit} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/" element={<Navigate to="/" />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+  <Header searchQuery={searchQuery} handleSubmit={handleSubmit} />
+  <Routes>
+    <Route index element={<Home />} />  // Set Home as the default route
+    <Route path="/about" element={<About />} />
+    <Route path="/services" element={<Services />} />
+    <Route path="/signin" element={<Signin />} />
+  </Routes>
+  <Footer />
+</BrowserRouter>
   );
 }
 
