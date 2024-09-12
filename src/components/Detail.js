@@ -11,7 +11,7 @@ const Detail = ({ meal, recipe }) => {
     <div className="overlay-card">
       <div className="overlay-content-card card-animate-card slide-left-card delay-2-card">
         <h1 className="h1-card card-animate-card slide-left-card card-pop-card delay-4-card">{meal.strTags}</h1>
-        <p className="p-card card-animate-card slide-left-card card-pop-card delay-5-card" style={{color: 'white', marginBottom: '2.5rem'}}>: <em>{meal.strMeal}</em></p>
+        <p className="p-card card-animate-card slide-left-card card-pop-card delay-5-card" style={{color: 'white', marginBottom: '2.5rem'}}>: <em style={{color:'black'}}>{meal.strMeal}</em></p>
       </div>
       <div className="image-content-card card-animate-card slide-card delay-5-card" style={{backgroundImage: `url(${meal.strMealThumb})`}}></div>
       <div className="dots-card card-animate-card">
