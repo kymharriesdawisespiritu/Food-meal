@@ -1,0 +1,274 @@
+
+.h1-card {
+	font-size: 5.25vmin;
+	text-align: center;
+	color: white;
+}
+.p-card {
+	font-size: max(10pt, 2.5vmin);
+	line-height: 1.4;
+	color: #0e390e;
+	margin-bottom: 1.5rem;
+}
+
+.wrap-card {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 85vmin;
+	height: 65vmin;
+	margin: 2rem auto;
+	border: 8px solid;
+	border-image: linear-gradient(
+			-50deg,
+			#F7D2C4, #F5F5DC, #8B9467, #FFD700,#F7D2C4, #F5F5DC, #8B9467, #FFD700
+		)
+		1;
+	transition: 0.3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+}
+.overlay-card {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding: 1rem 0.75rem;
+	background: #F2C464;
+	transition: 0.4s ease-in-out;
+	z-index: 1;
+}
+.overlay-content-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 15vmin;
+	height: 100%;
+	padding: 0.5rem 0 0 0.5rem;
+	border: 3px solid;
+	border-image: linear-gradient(
+			to bottom,
+			 #F7D2C4, #F5F5DC, #8B9467, #FFD700
+		)
+		0 0 0 100%;
+	transition: 0.3s ease-in-out 0.2s;
+	z-index: 1;
+}
+.image-content-card {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100vmin;
+	height: 100%;
+	background-size: cover;
+	transition: 0.3s ease-in-out;
+	/* border: 1px solid green; */
+}
+
+.inset-card {
+	max-width: 50%;
+	margin: 0.25em 1em 1em 0;
+	border-radius: 0.25em;
+	float: left;
+}
+
+.dots-card {
+	position: absolute;
+	bottom: 1rem;
+	right: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 55px;
+	height: 4vmin;
+	transition: 0.3s ease-in-out 0.3s;
+}
+.dot-card {
+	width: 14px;
+	height: 14px;
+	background: yellow;
+	border: 1px solid indigo;
+	border-radius: 50%;
+	transition: 0.3s ease-in-out 0.3s;
+}
+
+.text-card {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	padding: 3vmin 4vmin;
+	background: #fff;
+	box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / 0.4);
+	overflow-y: scroll;
+}
+
+.wrap-card:hover .overlay-card {
+	transform: translateX(-60vmin);
+}
+.wrap-card:hover .image-content-card {
+	width: 30vmin;
+}
+.wrap-card:hover .overlay-content-card {
+	border: none;
+	transition-delay: 0.5s;
+	transform: translateX(60vmin);
+}
+.wrap-card:hover .dots-card {
+	transform: translateX(1rem);
+}
+.wrap-card:hover .dots-card .dot-card {
+	background: white;
+}
+
+
+.card-animate-card {
+	animation-duration: 0.7s;
+	animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+	animation-fill-mode: backwards;
+}
+
+.card-pop-card {
+	animation-name: card-pop-card;
+}
+@keyframes card-pop-card {
+	0% {
+		opacity: 0;
+		transform: scale(0.5, 0.5);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+
+.slide-card {
+	animation-name: slide-card;
+}
+@keyframes slide-card {
+	0% {
+		opacity: 0;
+		transform: translate(4em, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.slide-left-card {
+	animation-name: slide-left-card;
+}
+@keyframes slide-left-card {
+	0% {
+		opacity: 0;
+		transform: translate(-40px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.slide-up-card {
+	animation-name: slide-up-card;
+}
+@keyframes slide-up-card {
+	0% {
+		opacity: 0;
+		transform: translateY(3em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.delay-1-card {
+	animation-delay: 0.3s;
+}
+.delay-2-card {
+	animation-delay: 0.6s;
+}
+.delay-3-card {
+	animation-delay: 0.9s;
+}
+.delay-4-card {
+	animation-delay: 1.2s;
+}
+.delay-5-card {
+	animation-delay: 1.5s;
+}
+.delay-6-card {
+	animation-delay: 1.8s;
+}
+.delay-7-card {
+	animation-delay: 2.1s;
+}
+.delay-8-card {
+	animation-delay: 2.4s;
+}
+@media only screen and (max-width: 1024px) {
+	.wrap-card {
+	  width: 70vmin;
+	  height: 55vmin;
+	}
+	.overlay-card {
+	  padding: 0.75rem 0.5rem;
+	}
+	.overlay-content-card {
+	  width: 12vmin;
+	  padding: 0.5rem 0 0 0.5rem;
+	}
+	.image-content-card {
+	  width: 70vmin;
+	}
+	.text-card {
+	  width: 55vmin;
+	  padding: 2.5vmin 2.5vmin;
+	}
+	.dots-card {
+	  bottom: 0.75rem;
+	  right: 1.5rem;
+	  width: 50px;
+	  height: 3.5vmin;
+	}
+	.dot-card {
+	  width: 12px;
+	  height: 12px;
+	}
+  }
+  
+  @media only screen and (min-width: 1200px) {
+	.wrap-card {
+	  width: 90vmin;
+	  height: 65vmin;
+	}
+	.overlay-card {
+	  padding: 1rem 1rem;
+	}
+	.overlay-content-card {
+	  width: 15vmin;
+	  padding: 0.75rem 0 0 0.75rem;
+	}
+	.image-content-card {
+	  width: 90vmin;
+	}
+	.text-card {
+	  width: 65vmin;
+	  padding: 3vmin 3vmin;
+	}
+	.dots-card {
+	  bottom: 1rem;
+	  right: 2rem;
+	  width: 60px;
+	  height: 4vmin;
+	}
+	.dot-card {
+	  width: 14px;
+	  height: 14px;
+	}
+  }
