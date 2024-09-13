@@ -3,12 +3,9 @@
 @tailwind utilities;
 
 body {
-	min-height: 100vh;
-	margin: 0;
-	padding: 0;
-	background: linear-gradient(
-		to top,
-		#FFC499, #F2C464, #8B9467, #FFD700
-	);
-	font-family: "Martel Sans", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #ffc499, #f2c464, #8b9467, #ffd700);
+  font-family: "Martel Sans", sans-serif;
 }
